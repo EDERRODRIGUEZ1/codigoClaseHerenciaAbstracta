@@ -20,15 +20,22 @@ class FiguraGeometrica:
     #metodo set
     @ancho.setter
     def ancho(self, ancho):
-        self._ancho = ancho
-
+        if self._validar_valor(ancho):
+            self._ancho = ancho
+        else:
+            print(f'Valor erroneo ancho: {ancho}')
+            self._ancho = 0
     @property
     def alto(self):
         return self._alto
 
     @alto.setter
     def alto(self, alto):
-        self._alto = alto
+        if self._validar_valor(alto):
+            self._alto = alto
+        else:
+            print(f'Valor erroneo alto: {alto}')
+            self._alto = 0
 
     #imprimir en consola
     def __str__(self):
@@ -36,6 +43,3 @@ class FiguraGeometrica:
 
     def _validar_valor(self, valor):
         return True if 0 < valor < 10 else False #notacion simplificada
-
-
-#instancias
