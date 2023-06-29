@@ -15,3 +15,9 @@ rectangulo.ancho = 15
 print(f'Calculo area rectangulo: {rectangulo.calcular_area()}')
 print(rectangulo)
 
+#Method Resolution Order
+print(Cuadrado.mro())
+
+
+
+
